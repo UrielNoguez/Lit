@@ -53,6 +53,9 @@ class formLimit extends LitElement{
             if(pswd.length>=1){
                 this.isPassword=true
             }
+            else{
+                this.isPassword=false
+            }
         }
         console.log(this.isPassword)
     }
