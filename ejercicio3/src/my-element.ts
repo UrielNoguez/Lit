@@ -55,12 +55,12 @@ private _npmInfoTask = new Task(this, {
 render() {
   return html`
     <label>
-      Coloca un nombre de depencia:
+      Coloca un index de imagen:
       <input .value=${this._noImagen} @change=${this._onChange} />
     </label>
     
     ${this._npmInfoTask.render({
-      initial: () => html`<span> Ingresa un nombre de una imagen </span>`,
+      initial: () => html`<span> Ingresa un index de una imagen </span>`,
       pending: () => html`<span>Cargando informacion</span>`,
       complete: (pkg:any) => html`
       <div class="carta">
@@ -81,5 +81,6 @@ render() {
 _onChange(e: Event) {
   this._noImagen = (e.target as HTMLInputElement).value;
 }
+
 }
 

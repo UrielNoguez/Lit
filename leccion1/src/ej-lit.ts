@@ -1,4 +1,4 @@
-import { css,html,LitElement } from "lit";
+import { css,html,LitElement ,PropertyValues} from "lit";
 import { customElement, property } from "lit/decorators.js";
 
 @customElement("ej-lit")
@@ -33,5 +33,14 @@ export class EjLit extends LitElement{
         <button @click="${this.eventPlus}">+</button>
     `;
   }
+
+  updated(changedes:PropertyValues<this>){
+    if(changedes.has('value')){
+        if(isNaN(this.value)){
+          this.value=0;
+        }
+    }
+
+}
 
 };

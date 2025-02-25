@@ -1,0 +1,32 @@
+[
+    {
+        "numero_de_imagen": 1,
+        "nombre": "assets/images/paisaje1.jpg",
+        "alt": "Imagen 1",
+        "descripcion": "Descripción de la imagen 1"
+    },
+    {
+        "numero_de_imagen": 2,
+        "nombre": "assets/images/paisaje2.jpg",
+        "alt": "Imagen 2",
+        "descripcion": "Descripción de la imagen 2"
+    },
+    {
+        "numero_de_imagen": 3,
+        "nombre": "assets/images/paisaje3.jpg",
+        "alt": "Imagen 3",
+        "descripcion": "Descripción de la imagen 3"
+    },
+    {
+        "numero_de_imagen": 4,
+        "nombre": "assets/images/paisaje4.jpg",
+        "alt": "Imagen 4",
+        "descripcion": "Descripción de la imagen 4"
+    },
+    {
+        "numero_de_imagen": 5,
+        "nombre": "assets/images/paisaje5.jpg",
+        "alt": "Imagen 5",
+        "descripcion": "Descripción de la imagen 5"
+    }
+]

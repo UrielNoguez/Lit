@@ -1,11 +1,11 @@
 import { LitElement,html,css, CSSResultGroup } from "lit";
-import { customElement, property } from "lit/decorators.js";
+import { customElement, property, state } from "lit/decorators.js";
 import { verifyEmail } from "./limit-utils";
 import "./form-msg.ts"
 import "./form-msg-pswd.ts"
 
 @customElement("form-limit")
-class formLimit extends LitElement{
+export class formLimit extends LitElement{
 
     static styles=css`div{
         display: flex;
@@ -16,13 +16,13 @@ class formLimit extends LitElement{
     }
     `
 
-    @property()
+    @state()
     userName?:string
-    @property()
+    @state()
     password?:string
-    @property()
+    @state()
     isUserName?:boolean
-    @property()
+    @state()
     isPassword?:boolean
 
     
@@ -46,6 +46,9 @@ class formLimit extends LitElement{
             this.isUserName=verifyEmail(email);
             console.log("usuario",this.isUserName,this.isPassword)
         }
+        else{
+            this.isUserName=false
+        }
     }
     _isValidPswd(e:Event){
         const pswd=(e.target as HTMLInputElement).value
@@ -53,9 +56,9 @@ class formLimit extends LitElement{
             if(pswd.length>=1){
                 this.isPassword=true
             }
-            else{
-                this.isPassword=false
-            }
+        }
+        else{
+            this.isPassword=false
         }
         console.log(this.isPassword)
     }
